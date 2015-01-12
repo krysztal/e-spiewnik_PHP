@@ -1,0 +1,413 @@
+body{
+    /*background-image: url("fon.jpg");
+    background-size: cover;*/
+    background:url("../image/fon.jpg") no-repeat center center fixed; /* dostosuj sobie */ 
+            -webkit-background-size: 100%;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;    
+    
+}
+
+span#play{
+	padding-left:10px;
+	cursor: pointer;
+	background:url(../image/play.png);
+	background-size: cover;
+	height:10px;
+	display:inline-block;
+}
+
+span#pause{
+	padding-left:10px;
+	cursor: pointer;
+	background:url(../image/pause.png);
+	background-size: cover;
+	height:10px;
+	display:inline-block;
+}
+
+span#stop{
+	padding-left:10px;
+	cursor: pointer;
+	background:url(../image/stop.png);
+	background-size: cover;
+	height:10px;
+	display:inline-block;
+}
+
+#progressBar { 
+
+   width:610px;
+   height:3px;
+   background:url(../image/progressbar.png);
+   display:block;
+   cursor:pointer;
+}
+
+#progress {
+   background:url(../image/progressbarfull.png);
+   height:3px;
+   display:inline-block;
+}
+#buttons {
+	margin-top: 7px;
+	margin-left: 10px;
+}
+
+#duration, #durationFullTime{
+  color: white;
+  font: 11px Verdana;
+  display:inline-block;
+  text-align: right;
+  width: 33px;
+}
+
+.buttonSpace {
+	padding-left: 10px;
+}
+
+#volume {
+	cursor: pointer;
+	background:url(../image/vol4.png);
+	background-size: cover;
+	height: 11px;
+	width: 23px;
+	display:inline-block;
+}
+
+
+#footer {
+    color: #AAAAAA;
+    float: left;
+    height: 40px;
+	margin-top: 20px;
+    text-align: center;
+	font: 11px Tahoma;
+	width: 670px;
+}
+
+.showfolder:hover {
+    color: #F8D7B8;
+}
+
+.showfolder {
+    color: whitesmoke;
+    opacity: 0.99;
+}
+
+.treefolder {
+    color: whitesmoke;
+}
+
+.treefolder:hover {
+    color: green;
+}
+
+.folder {
+    cursor: pointer;    
+}
+
+#Tree {
+    width: 280px;
+    box-shadow: 0 0 5px 1px black;
+    /* overflow: auto; */
+    border-radius: 2%;
+    background-image: url("../image/fon2.png");
+    
+    
+}
+
+.SongForOptions{
+    cursor:pointer;
+}
+
+.VoiceOptions{
+    cursor:pointer;
+}
+
+#content{
+    width: 280px;
+    box-shadow: 0 0 5px 1px black;
+    /* overflow: auto; */
+    border-radius: 2%;
+    background-image: url("../image/fon2.png");
+    font: 16px Times New Roman;
+}
+
+#player {
+    background-image: url("../image/player_fon.png");
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 2px black;
+    height: 30px;
+    margin-bottom: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+#SearchPanel.openSearch{
+    background-image: url("../image/find2.png");
+	background-size: cover;
+    padding-left: 15px;
+    cursor:pointer;
+	height:15px;
+	display:inline-block;
+}
+
+#SearchPanel.openSearch:hover{
+    background-image: url("../image/find.png");
+}
+
+#SearchPanel.closeSearch{
+    background-image: url("../image/find.png");
+	background-size: cover;
+    padding-left: 15px;
+    cursor:pointer;
+	height:15px;
+	display:inline-block;
+}
+
+#SlideCreatorPanel{
+	background-image: url("../image/button_open_slides_creator.png");
+	background-size: cover;
+    padding-left: 15px;
+    cursor:pointer;
+	height:15px;
+	display:inline-block;
+}
+
+#SearchPanel.closeSearch:hover{
+    background-image: url("../image/find2.png");
+}
+
+
+#SlideCreatorSongList{
+    overflow: auto;
+    color: white;
+	margin-bottom: 8px;
+	min-height: 200px;
+	width: 230px;
+	max-width: 230px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#SlideCreator img {
+    border-radius: 10%;
+    box-shadow: 0 0 4px 1px black;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    width: 24px;
+}
+
+#SlideCreator {
+	background-image: url("../image/fon2.png");
+	box-shadow: 0 0 5px 1px black;
+	border-radius: 2%;
+	display:inline-block;
+	margin-bottom: 8px;
+}
+
+#CloseSlideList {
+	margin: 5px 5px 19px 13px !important;
+    width: 14px !important;
+}
+#InFolder{
+    overflow: auto;
+    width: 550px;
+    box-shadow: 0 0 5px 1px black;
+    color: white;
+    border-radius: 2%;
+    background-image: url("../image/fon2.png");
+	z-index:9;
+}
+
+#searchButton{
+    margin-left: 18px; 
+    margin-bottom: 4px; 
+    margin-top: 3px;
+    background-image: url("../image/searchButton.png");
+    height: 20px;
+    width: 63px;
+    cursor: pointer;
+	border-radius: 2px;
+}
+
+#searchButton:hover{
+    background-image: url("../image/searchButtonH.png");
+}
+
+#Search{
+    box-shadow: 0 0 5px 1px black;
+    /* overflow: auto; */
+    border-radius: 2%;
+    background-image: url("../image/fon2.png");
+    font: 16px Times New Roman;
+    padding-bottom: 1px;
+}
+
+.Filter{
+    box-shadow: 0 0 2px 1px black;
+    /* overflow: auto; */
+    border-radius: 2%;
+    background-image: url("../image/fon2.png");
+    font: 16px Times New Roman;
+    width: 98px;
+}
+
+
+#ALL_Voice{
+    cursor: pointer;  
+}
+
+#text{
+    margin-left: 20px;
+    font: 16px Verdana;
+}
+
+.chouse{
+    background-color: #6c4632;
+}
+
+.chouseSliderItem{
+	background-color: #6c4632;
+}
+
+#login{
+    color: whitesmoke;
+    width: 280px;
+    box-shadow: 0 0 5px 1px black;
+    overflow: auto;
+    border-radius: 5%;
+    background-image: url("../image/fon2.png");  
+    margin: auto;
+    
+}
+
+#inputtext{
+    border-top-color:#993300;
+    border-right-color:#993300;
+    border-bottom-color:#993300;
+    border-left-color:#993300;
+    border-style:solid;
+    border-width:1px;
+    white-space:nowrap;
+    padding:0 5px 1px 5px;
+    margin:0 2px 0 1px;				
+    width: 266px;
+    height: 26px;
+    font-weight: bold;
+    background-color:#F8D7B8;
+    color: #993300;
+}
+
+#inputbutton{
+   border-top-color:#993300;
+    border-right-color:#993300;
+    border-bottom-color:#993300;
+    border-left-color:#993300;
+    border-style:solid;
+    border-width:1px;
+    white-space:nowrap;
+    padding:0 5px 1px 5px;
+    margin:0 2px 0 1px;				
+	cursor:pointer;
+    width: 100px;
+    height: 26px;
+    font-weight: bold;
+    background-color:#F8D7B8;
+    color: #993300; 
+    margin-left: 84px;
+}
+
+#inputbutton:hover{
+    cursor:pointer;
+    font-weight: bold;
+    background-color: #F8D7A8;
+    color: #993300;
+}
+
+.filterName {
+	text-align: center; 
+	color: #F8D7B8;
+}
+
+#Composers.filterSelect{
+    margin-left: 2px; 
+    border-radius: 3%; 
+    width: 93px;
+	margin-top: 4px;
+	position: relative;
+}
+
+#massPart.filterSelect{
+    margin-left: 2px; 
+    border-radius: 3%; 
+    width: 93px;
+	margin-top: 4px;
+}
+
+#category.filterSelect{
+    margin-left: 2px; 
+    border-radius: 3%; 
+    width: 93px;
+	margin-top: 4px;
+}
+
+.filterSelect ul{
+    
+    margin-bottom: 0px;
+    padding-left:1px;
+	max-height: 190px;
+    margin-top:0px;
+    background-image: url('../image/texture2.png');
+    display: none;
+}
+
+.filterSelect ul li{
+    list-style-type: none;
+	padding-left: 5px;
+	cursor: pointer;
+    /* background-color: #FF984F; */
+
+}
+
+.filterSelect ul li:hover{
+    background-color: #5E472B;
+}
+
+.filterSelect .jspContainer {
+	max-width: 150px;
+}
+
+.selectedField{
+    background-color: white;
+    height: 20px;
+	padding-left: 5px;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.slideItem{
+	color: whitesmoke;
+	cursor: pointer;
+}
+
+#FilterList .jspDrag {
+	width: 4px !important;
+	left: -1px !important;
+}
+
+#FilterList  {
+	padding-left: 5px;
+}
+
+a /*.contenteditable?*/ {
+    -webkit-touch-callout:default;
+    -webkit-user-select:none ;
+    -moz-user-select:none ;
+    -ms-user-select:none ;
+    user-select:none ;
+}

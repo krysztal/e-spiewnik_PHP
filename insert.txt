@@ -1,0 +1,620 @@
+﻿CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`Songs` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(200) NOT NULL,
+  `FileName` VARCHAR(200) NOT NULL,
+  `ManyVoice` BIT NOT NULL,
+  PRIMARY KEY (`Id`),
+  UNIQUE INDEX `FileName_UNIQUE` (`FileName` ASC),
+  UNIQUE INDEX `Name_UNIQUE` (`Name` ASC))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `daredemp_espiewnik`.`MassPart`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`MassPart` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(20) NOT NULL,
+  `FullName` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `daredemp_espiewnik`.`SongToMassPart`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`SongToMassPart` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Songs_Id` INT NOT NULL,
+  `MassPart_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_table1_Songs_idx` (`Songs_Id` ASC),
+  INDEX `fk_table1_SongFor1_idx` (`MassPart_Id` ASC),
+  CONSTRAINT `fk_table1_Songs`
+    FOREIGN KEY (`Songs_Id`)
+    REFERENCES `daredemp_espiewnik`.`Songs` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_table1_SongFor1`
+    FOREIGN KEY (`MassPart_Id`)
+    REFERENCES `daredemp_espiewnik`.`MassPart` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `daredemp_espiewnik`.`Composers`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`Composers` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NULL,
+  `SurName` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `daredemp_espiewnik`.`SongToComposer`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`SongToComposer` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Songs_Id` INT NOT NULL,
+  `Composers_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_SongToComposer_Songs1_idx` (`Songs_Id` ASC),
+  INDEX `fk_SongToComposer_Composers1_idx` (`Composers_Id` ASC),
+  CONSTRAINT `fk_SongToComposer_Songs1`
+    FOREIGN KEY (`Songs_Id`)
+    REFERENCES `daredemp_espiewnik`.`Songs` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_SongToComposer_Composers1`
+    FOREIGN KEY (`Composers_Id`)
+    REFERENCES `daredemp_espiewnik`.`Composers` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `daredemp_espiewnik`.`Category`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`Category` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(20) NULL,
+  `FullName` VARCHAR(45) NULL,
+  PRIMARY KEY (`Id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `daredemp_espiewnik`.`SongToCategory`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `daredemp_espiewnik`.`SongToCategory` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Category_Id` INT NOT NULL,
+  `Songs_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_SongToCategory_Category1_idx` (`Category_Id` ASC),
+  INDEX `fk_SongToCategory_Songs1_idx` (`Songs_Id` ASC),
+  CONSTRAINT `fk_SongToCategory_Category1`
+    FOREIGN KEY (`Category_Id`)
+    REFERENCES `daredemp_espiewnik`.`Category` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_SongToCategory_Songs1`
+    FOREIGN KEY (`Songs_Id`)
+    REFERENCES `daredemp_espiewnik`.`Songs` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+  
+
+  
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Agni Parthene', 'Agni Parthene', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Akatyst ku czci Bogurodzicy', 'Akatyst ku czci Bogurodzicy', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Alleluja (alleluia)', 'Alleluja (alleluia)', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Alleluja (oazowe)', 'Alleluja (oazowe)', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Amen (potrojne)', 'Amen (potrójne)', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Ave Maria Virgo virginum', 'Ave Maria Virgo virginum', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Badz wesola Panno', 'Badź wesoła Panno', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Bog jest miloscia', 'Bóg jest miłością', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Bog tak ukochal swiat', 'Bóg tak ukochał świat', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Bolesciwa Matka stala', 'Boleściwa Matka stała', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Boze moj', 'Boże mój', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Boska dobroci', 'Boska dobroci', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Byc blizej Ciebie chce', 'Być bliżej Ciebie chcę', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Cala ziemio wolaj', 'Cała ziemio wołaj', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Chleb niebianski (Hymn Etiopski)', 'Chleb niebiański (Hymn Etiopski)', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Christe, lux mundi', 'Christe, lux mundi', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Christus resurrexit', 'Christus resurrexit', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Chrystus Pan zmartwychwstal', 'Chrystus Pan zmartwychwstał', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Chrystus Zmartwychwstan jest', 'Chrystus Zmartwychwstan jest', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Chrzescijanie klaszczcie w dlonie', 'Chrześcijanie klaszczcie w dłonie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Chwala Ojcu', 'Chwała Ojcu', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Chwala Tobie Slowo Boze', 'Chwała Tobie Słowo Boże', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Dobranoc Glowo swieta', 'Dobranoc Głowo święta', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Dobry Pasterzu', 'Dobry Pasterzu', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Do Twarzy Chrystusa', 'Do Twarzy Chrystusa', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Duszo Chrystusowa', 'Duszo Chrystusowa', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Dzieki Ci Panie', 'Dzięki Ci Panie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Dziekuje Ci Boze', 'Dziękuję Ci Boże', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Dzis stoimy tu', 'Dziś stoimy tu', 0);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Gaude Mater Polonia', 'Gaude Mater Polonia', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Gdy ja sobie', 'Gdy ja sobie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Gloria Patri', 'Gloria Patri', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Gwiazdo morza', 'Gwiazdo morza', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Hejnal wszyscy zaspiewajmy', 'Hejnał wszyscy zaśpiewajmy', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Jasnieje Krzyz chwalebny', 'Jaśnieje Krzyż chwalebny', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Jezu Chryste Panie mily', 'Jezu Chryste Panie miły', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Jezu Tys caly krwia zbroczony', 'Jezu Tyś cały krwia zbroczony', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Kantyk Mojzesza', 'Kantyk Mojżesza', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Kantyk Mojzesza opr. D. Kusz', 'Kantyk Mojżesza opr. D. Kusz', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Krola wznosza sie znamiona', 'Króla wznoszą się znamiona', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Krzyzu Swiety', 'Krzyżu Święty', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Laudate Dominum', 'Laudate Dominum', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Litania do Bozego Milosierdzia', 'Litania do Bożego Miłosierdzia', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Ludu kaplanski', 'Ludu kapłański', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Ludu moj ludu', 'Ludu mój ludu', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Milujcie sie wzajemnie', 'Miłujcie się wzajemnie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Modlitwa do Ducha Swietego', 'Modlitwa do Ducha Świętego', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Modlitwa o skruche', 'Modlitwa o skruche', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Nabierzcie ducha', 'Nabierzcie ducha', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Nadziejo slodka i Pociecho', 'Nadziejo słodka i Pociecho', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Na Komunie', 'Na Komunie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Niebiosa rose', 'Niebiosa rose', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Niechaj Cie Panie wielbia', 'Niechaj Cię Panie wielbia', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Niech mnie strzeze', 'Niech mnie strzeże', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Nie lekajcie sie', 'Nie lękajcie się', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Ogrodzie oliwny', 'Ogrodzie oliwny', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Ojcze', 'Ojcze', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Ojcze spraw', 'Ojcze spraw', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Okaz mi Boze Milosierdzie Swoje', 'Okaż mi Boże Miłosiedzie Swoje', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'O Matko milosciwa', 'O Matko miłościwa', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'On', 'On', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'O Sw. Mikolaju Biskupie', 'O Św. Mikołaju Biskupie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Oto jest dzien', 'Oto jest dzień', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Oto Pan Bog przyjdzie', 'Oto Pan Bóg przyjdzie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Oto sa baranki mlode', 'Oto są baranki młode', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Per Crucem Tuam', 'Per Crucem Tuam', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Piesn do Jozefa', 'Pieśń do Józefa', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Piesn lotra', 'Pieśń łotra', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Piesn o nadziei', 'Pieśń o nadziei', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Piesn o Najswietszej Pannie', 'Pieśń o Najświetszej Pannie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Piesn trzech Marii', 'Pieśń trzech Marii', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Placzcie Anieli', 'Płaczcie Anieli', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Pozwol mi Twe meki spiewac', 'Pozwól mi Twe męki śpiewać', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Prosba - o Duchu Bozy', 'Prośba - o Duchu Boży', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Przychodzisz Panie', 'Przychodzisz Panie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Przyjdz do nas Panie', 'Przyjdź do nas Panie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Psalm 38', 'Psalm 38', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Psalm tesknoty', 'Psalm tęsknoty', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Rorate caeli desuper', 'Rorate caeli desuper', 0);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Sainte Nicolaes', 'Sainte Nicolaes', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Skosztujcie i zobaczcie', 'Skosztujcie i zobaczcie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Slad Losu', 'Slad Losu', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Stala Matka bolesciwa', 'Stała Matka boleściwa', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Stworzycielu gwiazd swiecacych', 'Stworzycielu gwiazd świecących', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Surrexit Christus', 'Surrexit Christus', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Sviaty Boze', 'Sviaty Boze', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Szczedryk', 'Szczedryk', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Tak bowiem Bog', 'Tak bowiem Bóg', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Tobie wznawiamy, Panno', 'Tobie wznawiamy, Panno', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Tylko w Bogu', 'Tylko w Bogu', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Tylko w Twoim milosierdziu', 'Tylko w Twoim miłosierdziu', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Urzad zbawienia ludzkiego', 'Urząd zbawienia ludzkiego', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Uwielbiam Twoje Imie', 'Uwielbiam Twoje Imię', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Uwielbienie Milosierdzia Bozego', 'Uwielbienie Miłosierdzia Bożego', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Wielbie Cie', 'Wielbię Cię', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Wierze', 'Wierzę', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Witaj Gwiazdo morza', 'Witaj Gwiazdo morza', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Witaj niebios Krolowo', 'Witaj niebios Królowo', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Witaj Pokarmie', 'Witaj Pokarmie', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Zawitaj Ukrzyzowany', 'Zawitaj Ukrzyżowany', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Zblizam sie w pokorze', 'Zbliżam się w pokorze', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Zdrowas badz Maryja', 'Zdrowaś bądź Maryja', 1);
+
+INSERT INTO `daredemp_espiewnik`.`Songs` (`Id`, `FileName`, `Name`, `ManyVoice`) 
+VALUES (NULL, 'Z nieba zstapilo Slowo Ojca', 'Z nieba zstapiło Słowo Ojca', 1);
+
+
+INSERT INTO `daredemp_espiewnik`.`MassPart` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'PNWE', 'Pieśni na Wejście');
+
+INSERT INTO `daredemp_espiewnik`.`MassPart` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'PNPD', 'Pieśńi na Przygotowanie Darów');
+
+INSERT INTO `daredemp_espiewnik`.`MassPart` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'PNK', 'Pieśni na Komunię');
+
+INSERT INTO `daredemp_espiewnik`.`MassPart` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'PNU', 'Pieśni na Uwielbienie');
+
+INSERT INTO `daredemp_espiewnik`.`MassPart` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'PNWY', 'Pieśni na Wyjście');
+
+INSERT INTO `daredemp_espiewnik`.`MassPart` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'PNANS', 'Pieśni na Adorację Najświętszego Sakramentu');
+
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'PNA', 'Pieśni na Adwent');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`) 
+VALUES (NULL, 'BN', 'Boże Narodzenie');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'PNWP', 'Pieśni na Wielki Post');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'PNW', 'Pieśni na Wielkanoc');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'TAIZE', 'Taize');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'PG', 'Pieśni Gregoriańskie');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'PDDŚ', 'Pieśni do Ducha Świętego');
+
+INSERT INTO `daredemp_espiewnik`.`Category` (`Id`, `Name`, `FullName`)  
+VALUES (NULL, 'PM', 'Pieśni Maryjne');
+
+INSERT INTO `daredemp_espiewnik`.`SongToMassPart` (`Id`, `Songs_Id`, `MassPart_Id`)  
+VALUES (NULL, '1', '1');
+
+INSERT INTO `daredemp_espiewnik`.`SongToCategory` (`Id`, `Songs_Id`, `Category_Id`)  
+VALUES (NULL, '1', '1');
+
+
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Nieznany', ' ');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Jacek', 'Gałuszka');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Paweł', 'Bębenek');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Urszula', 'Rogala');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Hubert', 'Kowalski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Piotr', 'Pałka');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Jakub', 'Tomalak');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Nektariusz', 'Kefalas');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Z', 'Biernat');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Andrzej', 'Bujnowski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'André', 'Gouzes');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Dawid', 'Kusz');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Stanisław', 'Cholewa');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Jacques ', 'Berthier');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Marcin', 'Pospieszalski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Stefan ', 'Stuligrosz');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Cezary', 'Paciorek');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Gen', 'Rosso');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Teofil', 'Klonowski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Jacek ', 'Sykulski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Johann', 'Wolfgang Franck');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Leszek', 'Kwiatkowski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Rafał', 'Wędzicki');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Wojciech', 'Konikiewicz');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Stanisław', 'Szczyciński');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Leopold', 'Twardowski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'M', 'Dzieciątko');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Wojciech', 'Skroboszewski');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Sebastian', 'Bach');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Mikolaj', 'Łeontowycz');
+INSERT INTO `daredemp_espiewnik`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Juliusz', 'Słowacki');
+
+
+
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '1','8');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '2','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '3','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '4','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '5','9');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '6','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '7','4');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '8','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '9','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '10','10');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '10','11');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '11','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '12','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '13','13');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '14','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '15','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '16','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '17','14');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '18','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '19','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '20','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '21','7');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '22','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '23','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '24','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '25','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '26','16');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '26','17');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '27','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '28','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '29','18');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '30','19');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '31','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '32','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '33','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '34','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '35','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '36','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '37','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '38','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '39','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '40','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '41','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '42','14');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '43','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '44','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '45','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '46','4');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '47','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '48','20');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '49','4');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '50','21');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '51','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '52','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '53','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '54','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '55','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '56','22');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '57','23');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '58','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '59','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '60','20');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '61','24');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '62','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '63','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '63','11');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '64','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '65','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '66','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '67','25');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '68','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '69','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '70','4');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '71','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '72','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '73','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '74','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '75','26');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '76','5');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '77','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '78','7');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '79','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '80','27');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '81','26');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '82','28');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '83','4');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '84','29');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '85','14');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '86','1');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '87','30');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '88','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '89','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '90','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '91','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '92','5');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '93','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '94','6');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '95','26');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '96','31');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '97','2');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '98','12');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '99','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '100','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '101','3');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '102','15');
+INSERT INTO `daredemp_espiewnik`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`) VALUES (NULL, '103','3');
+
+
+
+
