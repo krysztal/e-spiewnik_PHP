@@ -138,7 +138,6 @@
 						<td class="buttonSpace"></td>
 						<td><span title="Generator słajdów" id="SlideCreatorPanel" class="slideCreatorClose"></span></td>
 						<td class="buttonSpace"></td>
-						<td><span title="Wyszukiwarka" id="SearchPanel" class="closeSearch"></span></td>
 					</tr></table>
 					</div>
 				</div>
@@ -183,11 +182,13 @@
 								</table>
                             </div>
 							<div id="InFolder">
-                                <div id="text">
+                                <div id="songContent">
+								
                                 </div>
+								
                             </div>
                         </td>
-                        <td id="FilterList" style="vertical-align: top; display: none;">
+                        <td id="FilterList" style="vertical-align: top;">
                             <div style="margin-bottom: 15px;" id="Search">
                                 <div>
                                     <input style="width: 90px; margin-left: 4px; margin-top: 4px;" id="searchText" name="name" type="text" />

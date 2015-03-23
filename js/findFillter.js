@@ -75,21 +75,6 @@
         }
     });
 	
-   $('#SearchPanel').click(function(){
-        if($('.closeSearch').length!=0)
-        {
-            $('#FilterList').show();
-            $('#SearchPanel').attr('class', "openSearch")   
-			$('#progressBar').css('width', 716);
-        } 
-        else
-        {
-            $('#FilterList').hide();
-            $('#SearchPanel').attr('class', "closeSearch")   
-			$('#progressBar').css('width', 610);
-        }
-   });
-   
    $('#searchText').keypress(function (e) {
         var key = e.which;
         if(key == 13)  // the enter key code
@@ -145,7 +130,7 @@
         $('#Composers ul').hide();
         $('#Composers .separ').hide();
         $('#Composers ul').attr('id', 'optionsHide');
-        $('#Composers').width(92);
+        $('#Composers').width(93);
        
         
     });
@@ -160,7 +145,7 @@
         $('#MassPart ul').hide();
         $('#MassPart .separ').hide();
         $('#MassPart ul').attr('id', 'optionsHide');
-        $('#MassPart').width(92);
+        $('#MassPart').width(93);
        
         
     });
@@ -175,7 +160,7 @@
         $('#category ul').hide();
         $('#category .separ').hide();
         $('#category ul').attr('id', 'optionsHide');
-        $('#category').width(92);
+        $('#category').width(93);
        
         
     });

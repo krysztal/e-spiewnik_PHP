@@ -24,7 +24,7 @@ $(document).ready(function(){
             data: { folder: $(this).text()},
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
-                $('#text').html(data);
+                $('#songContent').html(data);
             },
         });
 
