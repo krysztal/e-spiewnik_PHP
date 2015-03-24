@@ -106,7 +106,7 @@
         
         if($filesarray[$i] == $foldername[0].".png")
         {
-            $img = '<img style="margin-left: 10px;" width="480" src="'.'http://localhost/'.'music/'.str_replace(" ", "%20", $foldername[0]).'/'.str_replace(" ", "%20", $filesarray[$i]).'" />';
+            $img = '<img style="margin-left: 20px; margin-top: 25px; margin-bottom: 25px;" width="480" src="'.'http://localhost/'.'music/'.str_replace(" ", "%20", $foldername[0]).'/'.str_replace(" ", "%20", $filesarray[$i]).'" />';
         }
         
         #--
@@ -220,32 +220,42 @@
 
     }
     if($text == "") $text = $img;
-    echo " <table style=\"color: white; font: 16px Verdana;\">
-    <tr>
-        <td>
-            <div>śpiew: </div>
-        </td>
-        <td>
-            <div>".$s1.$s2.$s3.$s4.$s5.$s6.$s7.$s8.$s9.$s10.$s11.$s12.$s13.$s14.$s15.$wz.$sz.$az.$tz.$bz.$Zwz.$Znz."</div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div>midi: </div>
-        </td>
-        <td>
-            <div>".$ws.$ss.$as.$ts.$bs."</div>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <div>nuty:</div>
-        </td>
-        <td>
-            <div>".$pdf.$pdfViolin."</div>
-        </td>
-    </tr>
- </table>"."<br><div>".$text.'</div>';
+    echo " 
+	<div id=\"MusicVersions\">
+		<spam class=\"musicVersionsItem\">Bębenek</spam><spam class=\"musicVersionsItem\">Bębenek</spam>
+	</div>
+	<div id=\"MusicMaterials\">
+		<table style=\"color: white; font: 16px Verdana; height: 110px\">
+			<tr class=\"MaterialsItem\">
+				<td>
+					<div>śpiew: </div>
+				</td>
+				<td>
+					<div>".$s1.$s2.$s3.$s4.$s5.$s6.$s7.$s8.$s9.$s10.$s11.$s12.$s13.$s14.$s15.$wz.$sz.$az.$tz.$bz.$Zwz.$Znz."</div>
+				</td>
+			</tr>
+			<tr class=\"MaterialsItem\">
+				<td>
+					<div>midi: </div>
+				</td>
+				<td>
+					<div>".$ws.$ss.$as.$ts.$bs."</div>
+				</td>
+			</tr>
+			<tr class=\"MaterialsItem\">
+				<td>
+					<div>nuty:</div>
+				</td>
+				<td>
+					<div>".$pdf.$pdfViolin."</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id=\"MusicText\">
+		<div style=\"margin-left: 15px;\">".$text."</div>
+	</div>
+		";
     
     closedir($handler);
 ?>

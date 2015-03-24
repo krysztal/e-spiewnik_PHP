@@ -182,7 +182,9 @@
 								</table>
                             </div>
 							<div id="InFolder">
-                                <div id="songContent">
+								
+								
+                                <div id="SongContent">
 								
                                 </div>
 								

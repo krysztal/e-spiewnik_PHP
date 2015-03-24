@@ -217,11 +217,58 @@ span#stop{
 #InFolder{
     overflow: auto;
     width: 550px;
-    box-shadow: 0 0 5px 1px black;
     color: white;
-    border-radius: 2%;
+	/*
+    box-shadow: 0 0 5px 1px black;
+	border-radius: 2%;
     background-image: url("../image/fon2.png");
 	z-index:9;
+	*/
+}
+
+#SongContent{
+	border-radius: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+#MusicVersions{
+	margin-top: 4px;
+}
+
+.musicVersionsItem{
+	padding: 1px 6px;
+	margin-right: 7px;
+	background-image: url("../image/fon2.png");
+	box-shadow: 0 0 2px 1px black;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#MusicMaterials{
+	box-shadow: 0 0 2px 1px black;
+	border-radius: 10px;
+    background-image: url("../image/fon2.png");
+	z-index:9;
+	margin-top: 5px;
+	padding-left: 20px;
+	height: 115px;
+	padding-top: 5px;
+}
+tr.MaterialsItem {
+	height: 34px;
+}
+
+
+#MusicText{
+	box-shadow: 0 0 3px 1px black;
+	border-radius: 10px;
+    background-image: url("../image/fon2.png");
+	z-index:9;
+	margin-top:6px;
+	width: 548px;
+	min-height: 265px;
+	font: 16px Verdana;
 }
 
 #searchButton{
@@ -382,6 +429,11 @@ span#stop{
 	max-width: 150px;
 }
 
+/*
+.MusicText .jspContainer {
+	width: 150px;
+}
+*/
 .selectedField{
     background-color: white;
     height: 20px;

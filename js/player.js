@@ -3,13 +3,16 @@ var valClick = false;
 audio = new Audio();
 
 $(document).ready(function(){
-   var element = jQuery('#InFolder').jScrollPane({autoReinitialise: true, maintainPosition: false});
+   var element = jQuery('#MusicText').jScrollPane({autoReinitialise: true, maintainPosition: false});
    var element2 = jQuery('#Composers ul').jScrollPane({autoReinitialise: true, maintainPosition: false});
    //var element3 = jQuery('#SlideCreatorSongList').jScrollPane({autoReinitialise: true, maintainPosition: false});
    var api = element.data('jsp');
    $('#pause').hide();
    var contentHeight = $(document).context.body.clientHeight-$('#footer').height()-40-$('#player').height();
    $("#content").attr("style","max-height: "+contentHeight+"px; height:auto");
+   
+   
+   
    $("#InFolder").attr("style","min-height: "+contentHeight+"px;");
    $("#InFolder").attr("style",$("#InFolder").attr("style")+" max-height: "+contentHeight+"px;");
    $("#InFolder").hide();
@@ -24,7 +27,9 @@ $(document).ready(function(){
             data: { folder: $(this).text()},
             contentType: 'application/json; charset=utf-8',
             success: function (data) {
-                $('#songContent').html(data);
+                $('#SongContent').html(data);
+				element = jQuery('#MusicText').jScrollPane({autoReinitialise: true, maintainPosition: false});
+				$("#MusicText").attr("style",$("#MusicText").attr("style")+" max-height: "+(contentHeight-155)+"px;");
             },
         });
 
