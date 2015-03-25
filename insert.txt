@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `testpl`.`SongToComposer` (
   `Id` INT NOT NULL AUTO_INCREMENT,
   `Songs_Id` INT NOT NULL,
   `Composers_Id` INT NOT NULL,
-  `ManyVoice` BIT NULL DEFAULT 0,
+  `ManyVoice` BIT NOT NULL DEFAULT 0,
   PRIMARY KEY (`Id`),
   INDEX `fk_SongToComposer_Songs1_idx` (`Songs_Id` ASC),
   INDEX `fk_SongToComposer_Composers1_idx` (`Composers_Id` ASC),
@@ -115,6 +115,7 @@ CREATE TABLE IF NOT EXISTS `testpl`.`SongToCategory` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
 
 
   
@@ -517,113 +518,112 @@ INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Juliu
 
 
 
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '1','8','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '2','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '3','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '4','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '5','9','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '6','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '7','4','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '8','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '9','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '10','10','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '10','11','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '11','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '12','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '13','13','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '14','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '15','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '16','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '17','14','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '18','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '19','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '20','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '21','7','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '22','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '23','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '24','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '25','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '26','16','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '26','17','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '27','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '28','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '29','18','0');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '30','19','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '31','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '32','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '33','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '34','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '35','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '36','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '37','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '38','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '39','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '40','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '41','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '42','14','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '43','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '44','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '45','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '46','4','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '47','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '48','20','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '49','4','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '50','21','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '51','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '52','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '53','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '54','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '55','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '56','22','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '57','23','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '58','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '59','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '60','20','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '61','24','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '62','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '63','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '63','11','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '64','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '65','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '66','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '67','25','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '68','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '69','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '70','4','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '71','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '72','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '73','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '74','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '75','26','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '76','5','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '77','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '78','7','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '79','1','0');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '80','27','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '81','26','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '82','28','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '83','4','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '84','29','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '85','14','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '86','1','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '87','30','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '88','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '89','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '90','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '91','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '92','5','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '93','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '94','6','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '95','26','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '96','31','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '97','2','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '98','12','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '99','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '100','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '101','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '102','15','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '103','3','1');
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '104','3','1');
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '1','8',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '2','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '3','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '4','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '5','9',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '6','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '7','4',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '8','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '9','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '10','10',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '10','11',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '11','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '12','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '13','13',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '14','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '15','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '16','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '17','14',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '18','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '19','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '20','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '21','7',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '22','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '23','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '24','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '25','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '26','17',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '27','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '28','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '29','18',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '30','19',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '31','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '32','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '33','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '34','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '35','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '36','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '37','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '38','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '39','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '40','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '41','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '42','14',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '43','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '44','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '45','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '46','4',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '47','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '48','20',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '49','4',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '50','21',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '51','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '52','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '53','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '54','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '55','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '56','22',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '57','23',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '58','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '59','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '60','20',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '61','24',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '62','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '63','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '63','11',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '64','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '65','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '66','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '67','25',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '68','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '69','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '70','4',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '71','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '72','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '73','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '74','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '75','26',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '76','5',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '77','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '78','7',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '79','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '80','27',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '81','26',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '82','28',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '83','4',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '84','29',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '85','14',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '86','1',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '87','30',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '88','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '89','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '90','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '91','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '92','5',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '93','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '94','6',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '95','26',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '96','31',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '97','2',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '98','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '99','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '100','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '101','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '102','15',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '103','3',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '104','3',1);
 
 
 

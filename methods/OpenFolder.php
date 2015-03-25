@@ -2,7 +2,7 @@
     include_once 'connection.php';
 
     $folder = $_GET['folder'];
-    $sql = "SELECT FileName FROM Songs where Name ='".$folder."';";
+	$sql = "SELECT Songs.FileName, SongToComposer.Composers_Id, Composers.Name, Composers.Surname FROM Songs JOIN SongToComposer ON Songs.Id = SongToComposer.Songs_Id JOIN Composers ON Composers.Id = SongToComposer.Composers_Id WHERE Songs.Name = '".$folder."';";
     $result = mysql_query($sql, $db_server)
         or die("Invalid query: " . mysql_error());
    
@@ -220,9 +220,13 @@
 
     }
     if($text == "") $text = $img;
-    echo " 
-	<div id=\"MusicVersions\">
-		<spam class=\"musicVersionsItem\">Bębenek</spam><spam class=\"musicVersionsItem\">Bębenek</spam>
+	$musicVersionsItems = "<div id=\"MusicVersions\">";
+	$musicVersionsItems .= "<spam class=\"musicVersionsItem\">".$foldername[2]." ".$foldername[3]."</spam>";
+	while ($row = mysql_fetch_row($result))
+    {
+		$musicVersionsItems .= "<spam class=\"musicVersionsItem\">".$row[2]." ".$row[3]."</spam>";
+    }   
+    echo $musicVersionsItems." 
 	</div>
 	<div id=\"MusicMaterials\">
 		<table style=\"color: white; font: 16px Verdana; height: 110px\">
