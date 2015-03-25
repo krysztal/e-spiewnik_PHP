@@ -122,316 +122,313 @@ ENGINE = InnoDB;
 
   
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Agni Parthene', 'Agni Parthene');
+VALUES (1, 'Agni Parthene', 'Agni Parthene');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Akatyst ku czci Bogurodzicy', 'Akatyst ku czci Bogurodzicy');
+VALUES (2, 'Akatyst ku czci Bogurodzicy', 'Akatyst ku czci Bogurodzicy');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Alleluja (alleluia)', 'Alleluja (alleluia)');
+VALUES (3, 'Alleluja (alleluia)', 'Alleluja (alleluia)');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Alleluja (oazowe)', 'Alleluja (oazowe)');
+VALUES (4, 'Alleluja (oazowe)', 'Alleluja (oazowe)');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Amen (potrojne)', 'Amen (potrójne)');
+VALUES (5, 'Amen (potrojne)', 'Amen (potrójne)');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Ave Maria Virgo virginum', 'Ave Maria Virgo virginum');
+VALUES (6, 'Ave Maria Virgo virginum', 'Ave Maria Virgo virginum');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Badz wesola Panno', 'Badź wesoła Panno');
+VALUES (7, 'Badz wesola Panno', 'Badź wesoła Panno');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Bog jest miloscia', 'Bóg jest miłością');
+VALUES (8, 'Bog jest miloscia', 'Bóg jest miłością');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Bog tak ukochal swiat', 'Bóg tak ukochał świat');
+VALUES (9, 'Bog tak ukochal swiat', 'Bóg tak ukochał świat');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Bolesciwa Matka stala', 'Boleściwa Matka stała');
+VALUES (10, 'Bolesciwa Matka stala', 'Boleściwa Matka stała');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Boze moj', 'Boże mój');
+VALUES (11, 'Boze moj', 'Boże mój');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Boska dobroci', 'Boska dobroci');
+VALUES (12, 'Boska dobroci', 'Boska dobroci');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Byc blizej Ciebie chce', 'Być bliżej Ciebie chcę');
+VALUES (13, 'Byc blizej Ciebie chce', 'Być bliżej Ciebie chcę');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Cala ziemio wolaj', 'Cała ziemio wołaj');
+VALUES (14, 'Cala ziemio wolaj', 'Cała ziemio wołaj');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Chleb niebianski (Hymn Etiopski)', 'Chleb niebiański (Hymn Etiopski)');
+VALUES (15, 'Chleb niebianski (Hymn Etiopski)', 'Chleb niebiański (Hymn Etiopski)');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Christe, lux mundi', 'Christe, lux mundi');
+VALUES (16, 'Christe, lux mundi', 'Christe, lux mundi');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Christus resurrexit', 'Christus resurrexit');
+VALUES (17, 'Christus resurrexit', 'Christus resurrexit');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Chrystus Pan zmartwychwstal', 'Chrystus Pan zmartwychwstał');
+VALUES (18, 'Chrystus Pan zmartwychwstal', 'Chrystus Pan zmartwychwstał');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Chrystus Zmartwychwstan jest', 'Chrystus Zmartwychwstan jest');
+VALUES (19, 'Chrystus Zmartwychwstan jest', 'Chrystus Zmartwychwstan jest');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Chrzescijanie klaszczcie w dlonie', 'Chrześcijanie klaszczcie w dłonie');
+VALUES (20, 'Chrzescijanie klaszczcie w dlonie', 'Chrześcijanie klaszczcie w dłonie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Chwala Ojcu', 'Chwała Ojcu');
+VALUES (21, 'Chwala Ojcu', 'Chwała Ojcu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Chwala Tobie Slowo Boze', 'Chwała Tobie Słowo Boże');
+VALUES (22, 'Chwala Tobie Slowo Boze', 'Chwała Tobie Słowo Boże');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Dobranoc Glowo swieta', 'Dobranoc Głowo święta');
+VALUES (23, 'Dobranoc Glowo swieta', 'Dobranoc Głowo święta');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Dobry Pasterzu', 'Dobry Pasterzu');
+VALUES (24, 'Dobry Pasterzu', 'Dobry Pasterzu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Do Twarzy Chrystusa', 'Do Twarzy Chrystusa');
+VALUES (25, 'Do Twarzy Chrystusa', 'Do Twarzy Chrystusa');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Duszo Chrystusowa', 'Duszo Chrystusowa');
+VALUES (26, 'Duszo Chrystusowa', 'Duszo Chrystusowa');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Dzieki Ci Panie', 'Dzięki Ci Panie');
+VALUES (27, 'Dzieki Ci Panie', 'Dzięki Ci Panie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Dziekuje Ci Boze', 'Dziękuję Ci Boże');
+VALUES (28, 'Dziekuje Ci Boze', 'Dziękuję Ci Boże');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Dzis stoimy tu', 'Dziś stoimy tu');
+VALUES (29, 'Dzis stoimy tu', 'Dziś stoimy tu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Gaude Mater Polonia', 'Gaude Mater Polonia');
+VALUES (30, 'Gaude Mater Polonia', 'Gaude Mater Polonia');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Gdy ja sobie', 'Gdy ja sobie');
+VALUES (31, 'Gdy ja sobie', 'Gdy ja sobie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Gloria Patri', 'Gloria Patri');
+VALUES (32, 'Gloria Patri', 'Gloria Patri');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Gwiazdo morza', 'Gwiazdo morza');
+VALUES (33, 'Gwiazdo morza', 'Gwiazdo morza');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Hejnal wszyscy zaspiewajmy', 'Hejnał wszyscy zaśpiewajmy');
+VALUES (34, 'Hejnal wszyscy zaspiewajmy', 'Hejnał wszyscy zaśpiewajmy');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Jasnieje Krzyz chwalebny', 'Jaśnieje Krzyż chwalebny');
+VALUES (35, 'Jasnieje Krzyz chwalebny', 'Jaśnieje Krzyż chwalebny');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Jezu Chryste Panie mily', 'Jezu Chryste Panie miły');
+VALUES (36, 'Jezu Chryste Panie mily', 'Jezu Chryste Panie miły');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Jezu Tys caly krwia zbroczony', 'Jezu Tyś cały krwia zbroczony');
+VALUES (37, 'Jezu Tys caly krwia zbroczony', 'Jezu Tyś cały krwia zbroczony');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Kantyk Mojzesza', 'Kantyk Mojżesza');
+VALUES (38, 'Kantyk Mojzesza', 'Kantyk Mojżesza');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Kantyk Mojzesza opr. D. Kusz', 'Kantyk Mojżesza opr. D. Kusz');
+VALUES (40, 'Krola wznosza sie znamiona', 'Króla wznoszą się znamiona');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Krola wznosza sie znamiona', 'Króla wznoszą się znamiona');
+VALUES (41, 'Krzyzu Swiety', 'Krzyżu Święty');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Krzyzu Swiety', 'Krzyżu Święty');
+VALUES (42, 'Laudate Dominum', 'Laudate Dominum');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Laudate Dominum', 'Laudate Dominum');
+VALUES (43, 'Litania do Bozego Milosierdzia', 'Litania do Bożego Miłosierdzia');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Litania do Bozego Milosierdzia', 'Litania do Bożego Miłosierdzia');
+VALUES (44, 'Ludu kaplanski', 'Ludu kapłański');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Ludu kaplanski', 'Ludu kapłański');
+VALUES (45, 'Ludu moj ludu', 'Ludu mój ludu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Ludu moj ludu', 'Ludu mój ludu');
+VALUES (46, 'Milujcie sie wzajemnie', 'Miłujcie się wzajemnie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Milujcie sie wzajemnie', 'Miłujcie się wzajemnie');
+VALUES (47, 'Modlitwa do Ducha Swietego', 'Modlitwa do Ducha Świętego');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Modlitwa do Ducha Swietego', 'Modlitwa do Ducha Świętego');
+VALUES (48, 'Modlitwa o skruche', 'Modlitwa o skruche');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Modlitwa o skruche', 'Modlitwa o skruche');
+VALUES (49, 'Nabierzcie ducha', 'Nabierzcie ducha');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Nabierzcie ducha', 'Nabierzcie ducha');
+VALUES (50, 'Nadziejo slodka i Pociecho', 'Nadziejo słodka i Pociecho');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Nadziejo slodka i Pociecho', 'Nadziejo słodka i Pociecho');
+VALUES (51, 'Na Komunie', 'Na Komunie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Na Komunie', 'Na Komunie');
+VALUES (52, 'Niebiosa rose', 'Niebiosa rose');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Niebiosa rose', 'Niebiosa rose');
+VALUES (53, 'Niechaj Cie Panie wielbia', 'Niechaj Cię Panie wielbia');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Niechaj Cie Panie wielbia', 'Niechaj Cię Panie wielbia');
+VALUES (54, 'Niech mnie strzeze', 'Niech mnie strzeże');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Niech mnie strzeze', 'Niech mnie strzeże');
+VALUES (55, 'Nie lekajcie sie', 'Nie lękajcie się');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Nie lekajcie sie', 'Nie lękajcie się');
+VALUES (56, 'Ogrodzie oliwny', 'Ogrodzie oliwny');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Ogrodzie oliwny', 'Ogrodzie oliwny');
+VALUES (57, 'Ojcze', 'Ojcze');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Ojcze', 'Ojcze');
+VALUES (58, 'Ojcze spraw', 'Ojcze spraw');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Ojcze spraw', 'Ojcze spraw');
+VALUES (59, 'Okaz mi Boze Milosierdzie Swoje', 'Okaż mi Boże Miłosiedzie Swoje');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Okaz mi Boze Milosierdzie Swoje', 'Okaż mi Boże Miłosiedzie Swoje');
+VALUES (60, 'O Matko milosciwa', 'O Matko miłościwa');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'O Matko milosciwa', 'O Matko miłościwa');
+VALUES (61, 'On', 'On');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'On', 'On');
+VALUES (62, 'O Sw. Mikolaju Biskupie', 'O Św. Mikołaju Biskupie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'O Sw. Mikolaju Biskupie', 'O Św. Mikołaju Biskupie');
+VALUES (63, 'Oto jest dzien', 'Oto jest dzień');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Oto jest dzien', 'Oto jest dzień');
+VALUES (64, 'Oto Pan Bog przyjdzie', 'Oto Pan Bóg przyjdzie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Oto Pan Bog przyjdzie', 'Oto Pan Bóg przyjdzie');
+VALUES (65, 'Oto sa baranki mlode', 'Oto są baranki młode');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Oto sa baranki mlode', 'Oto są baranki młode');
+VALUES (66, 'Per Crucem Tuam', 'Per Crucem Tuam');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Per Crucem Tuam', 'Per Crucem Tuam');
+VALUES (67, 'Piesn do Jozefa', 'Pieśń do Józefa');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Piesn do Jozefa', 'Pieśń do Józefa');
+VALUES (68, 'Piesn lotra', 'Pieśń łotra');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Piesn lotra', 'Pieśń łotra');
+VALUES (69, 'Piesn o nadziei', 'Pieśń o nadziei');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Piesn o nadziei', 'Pieśń o nadziei');
+VALUES (70, 'Piesn o Najswietszej Pannie', 'Pieśń o Najświetszej Pannie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Piesn o Najswietszej Pannie', 'Pieśń o Najświetszej Pannie');
+VALUES (71, 'Piesn trzech Marii', 'Pieśń trzech Marii');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Piesn trzech Marii', 'Pieśń trzech Marii');
+VALUES (72, 'Placzcie Anieli', 'Płaczcie Anieli');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Placzcie Anieli', 'Płaczcie Anieli');
+VALUES (73, 'Pozwol mi Twe meki spiewac', 'Pozwól mi Twe męki śpiewać');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Pozwol mi Twe meki spiewac', 'Pozwól mi Twe męki śpiewać');
+VALUES (74, 'Prosba - o Duchu Bozy', 'Prośba - o Duchu Boży');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Prosba - o Duchu Bozy', 'Prośba - o Duchu Boży');
+VALUES (75, 'Przychodzisz Panie', 'Przychodzisz Panie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Przychodzisz Panie', 'Przychodzisz Panie');
+VALUES (76, 'Przyjdz do nas Panie', 'Przyjdź do nas Panie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Przyjdz do nas Panie', 'Przyjdź do nas Panie');
+VALUES (77, 'Psalm 38', 'Psalm 38');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Psalm 38', 'Psalm 38');
+VALUES (78, 'Psalm tesknoty', 'Psalm tęsknoty');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Psalm tesknoty', 'Psalm tęsknoty');
+VALUES (79, 'Rorate caeli desuper', 'Rorate caeli desuper');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Rorate caeli desuper', 'Rorate caeli desuper');
+VALUES (80, 'Sainte Nicolaes', 'Sainte Nicolaes');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Sainte Nicolaes', 'Sainte Nicolaes');
+VALUES (81, 'Skosztujcie i zobaczcie', 'Skosztujcie i zobaczcie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Skosztujcie i zobaczcie', 'Skosztujcie i zobaczcie');
+VALUES (82, 'Slad Losu', 'Slad Losu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Slad Losu', 'Slad Losu');
+VALUES (83, 'Stala Matka bolesciwa', 'Stała Matka boleściwa');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Stala Matka bolesciwa', 'Stała Matka boleściwa');
+VALUES (84, 'Stworzycielu gwiazd swiecacych', 'Stworzycielu gwiazd świecących');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Stworzycielu gwiazd swiecacych', 'Stworzycielu gwiazd świecących');
+VALUES (85, 'Surrexit Christus', 'Surrexit Christus');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Surrexit Christus', 'Surrexit Christus');
+VALUES (86, 'Sviaty Boze', 'Sviaty Boze');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Sviaty Boze', 'Sviaty Boze');
+VALUES (87, 'Szczedryk', 'Szczedryk');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Szczedryk', 'Szczedryk');
+VALUES (88, 'Tak bowiem Bog', 'Tak bowiem Bóg');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Tak bowiem Bog', 'Tak bowiem Bóg');
+VALUES (89, 'Tobie wznawiamy, Panno', 'Tobie wznawiamy, Panno');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Tobie wznawiamy, Panno', 'Tobie wznawiamy, Panno');
+VALUES (90, 'Tylko w Bogu', 'Tylko w Bogu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Tylko w Bogu', 'Tylko w Bogu');
+VALUES (91, 'Tylko w Twoim milosierdziu', 'Tylko w Twoim miłosierdziu');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Tylko w Twoim milosierdziu', 'Tylko w Twoim miłosierdziu');
+VALUES (92, 'Urzad zbawienia ludzkiego', 'Urząd zbawienia ludzkiego');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Urzad zbawienia ludzkiego', 'Urząd zbawienia ludzkiego');
+VALUES (93, 'Uwielbiam Twoje Imie', 'Uwielbiam Twoje Imię');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Uwielbiam Twoje Imie', 'Uwielbiam Twoje Imię');
+VALUES (94, 'Uwielbienie Milosierdzia Bozego', 'Uwielbienie Miłosierdzia Bożego');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Uwielbienie Milosierdzia Bozego', 'Uwielbienie Miłosierdzia Bożego');
+VALUES (95, 'Wielbie Cie', 'Wielbię Cię');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Wielbie Cie', 'Wielbię Cię');
+VALUES (96, 'Wierze', 'Wierzę');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Wierze', 'Wierzę');
+VALUES (97, 'Witaj Gwiazdo morza', 'Witaj Gwiazdo morza');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Witaj Gwiazdo morza', 'Witaj Gwiazdo morza');
+VALUES (98, 'Witaj niebios Krolowo', 'Witaj niebios Królowo');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Witaj niebios Krolowo', 'Witaj niebios Królowo');
+VALUES (99, 'Witaj Pokarmie', 'Witaj Pokarmie');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Witaj Pokarmie', 'Witaj Pokarmie');
+VALUES (100, 'Zawitaj Ukrzyzowany', 'Zawitaj Ukrzyżowany');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Zawitaj Ukrzyzowany', 'Zawitaj Ukrzyżowany');
+VALUES (101, 'Zblizam sie w pokorze', 'Zbliżam się w pokorze');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Zblizam sie w pokorze', 'Zbliżam się w pokorze');
+VALUES (102, 'Zdrowas badz Maryja', 'Zdrowaś bądź Maryja');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Zdrowas badz Maryja', 'Zdrowaś bądź Maryja');
+VALUES (103, 'Z nieba zstapilo Slowo Ojca', 'Z nieba zstapiło Słowo Ojca');
 
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Z nieba zstapilo Slowo Ojca', 'Z nieba zstapiło Słowo Ojca');
-
-INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
-VALUES (NULL, 'Jezu ufam Tobie', 'Jezu ufam Tobie');
+VALUES (104, 'Jezu ufam Tobie', 'Jezu ufam Tobie');
 
 
 INSERT INTO `testpl`.`MassPart` (`Id`, `Name`, `FullName`) 
@@ -528,7 +525,6 @@ INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVo
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '8','1',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '9','1',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '10','10',1);
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '10','11',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '11','1',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '12','12',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '13','13',1);
@@ -557,7 +553,7 @@ INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVo
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '36','15',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '37','3',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '38','2',1);
-INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '39','12',1);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '38','12',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '40','1',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '41','2',1);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '42','14',1);

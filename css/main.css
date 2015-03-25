@@ -233,16 +233,20 @@ span#stop{
 }
 
 #MusicVersions{
-	margin-top: 4px;
 }
 
 .musicVersionsItem{
 	padding: 1px 6px;
-	margin-right: 7px;
+	margin-left: 5px;
 	background-image: url("../image/fon2.png");
 	box-shadow: 0 0 2px 1px black;
 	border-radius: 5px;
 	cursor: pointer;
+	color: white;
+}
+
+.selectedMVI{
+	color: #f8d7b8 !important;
 }
 
 #MusicMaterials{
@@ -250,23 +254,32 @@ span#stop{
 	border-radius: 10px;
     background-image: url("../image/fon2.png");
 	z-index:9;
-	margin-top: 5px;
+	margin-top: 2px;
 	padding-left: 20px;
 	height: 115px;
 	padding-top: 5px;
+	margin-bottom: 4px;
 }
+
 tr.MaterialsItem {
 	height: 34px;
 }
-
+#NameOfSongV{
+	padding: 1px 6px;
+	margin-right: 7px;
+	background-image: url("../image/fon2.png");
+	box-shadow: 0 0 2px 1px black;
+	border-radius: 5px;
+	color:white;
+	cursor: default;
+}
 
 #MusicText{
 	box-shadow: 0 0 3px 1px black;
 	border-radius: 10px;
     background-image: url("../image/fon2.png");
 	z-index:9;
-	margin-top:6px;
-	width: 548px;
+	width: 546px;
 	min-height: 265px;
 	font: 16px Verdana;
 }
@@ -429,11 +442,7 @@ tr.MaterialsItem {
 	max-width: 150px;
 }
 
-/*
-.MusicText .jspContainer {
-	width: 150px;
-}
-*/
+
 .selectedField{
     background-color: white;
     height: 20px;

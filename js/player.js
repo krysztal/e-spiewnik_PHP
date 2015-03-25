@@ -36,7 +36,23 @@ $(document).ready(function(){
      $("#InFolder").show();
    });
    
-	
+   $('.musicVersionsItem').live("click", function(){
+		if(!$(this).hasClass("selectedMVI"))
+		{
+			$('.selectedMVI').removeClass("selectedMVI");
+			$(this).addClass("selectedMVI");
+			$.ajax({
+				url: "/methods/GetSongComponent.php",
+				type: 'GET',
+				data: { folderName: $('#NameOfSongV').attr("folderName"), composerId: $(this).attr("composerId")},
+				contentType: 'application/json; charset=utf-8',
+				success: function (data) {
+					$('#MusicMaterials').html(data);
+				}
+			});
+		}
+   });
+   
    $('#ALL_Voice').live("click", function(){
 		audio.pause();
 		audio = new Audio($(this).attr('link'));
