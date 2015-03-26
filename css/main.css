@@ -447,6 +447,7 @@ tr.MaterialsItem {
     background-color: white;
     height: 20px;
 	padding-left: 5px;
+	padding-top: 1px;
 	cursor: pointer;
 	border-radius: 2px;
 }

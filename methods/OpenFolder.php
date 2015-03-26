@@ -107,7 +107,7 @@
         
         if($filesarray[$i] == $foldername[0].".png")
         {
-            $img = '<img style="margin-left: 20px; margin-top: 25px; margin-bottom: 25px;" width="480" src="'.'http://localhost/'.'music/'.str_replace(" ", "%20", $foldername[0]).'/'.str_replace(" ", "%20", $filesarray[$i]).'" />';
+            $img = '<img style="margin-left: 20px; margin-top: 20px; margin-bottom: 25px;" width="480" src="'.'http://localhost/'.'music/'.str_replace(" ", "%20", $foldername[0]).'/'.str_replace(" ", "%20", $filesarray[$i]).'" />';
         }
         
         #--
@@ -259,7 +259,7 @@
 		</table>
 	</div>
 	<div id=\"MusicText\">
-		<div style=\"margin-left: 15px;\">".$text."</div>
+		<div style=\"margin-left: 15px; margin-top: 7px;\">".$text."</div>
 	</div>
 		";
     
