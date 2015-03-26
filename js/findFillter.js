@@ -85,14 +85,14 @@
     });  
     
    $('.VoiceOptions').click(function(){
-        GetSongs('', $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
+        GetSongs($('#searchText').val(), $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
    });
     
    $('.MassPartOptions').click(function(){
-        GetSongs('', $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
+        GetSongs($('#searchText').val(), $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
    });
    $('.CategoryOptions').click(function(){
-        GetSongs('', $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
+        GetSongs($('#searchText').val(), $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
    });
 
    $('#searchButton').click(function(){
@@ -100,7 +100,7 @@
    });
    
    $('#Composers').change(function(){
-        GetSongs('', $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
+        GetSongs($('#searchText').val(), $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
    })
    
    $('#Composers ul li').click(function(event){
@@ -125,7 +125,7 @@
             $('#Composers .selectedText').text($(this).text());
         $('#selectedComposer').attr('id', '');
         $(this).find('div').attr('id', 'selectedComposer');
-        GetSongs('', $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
+        GetSongs($('#searchText').val(), $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
         
         $('#Composers ul').hide();
         $('#Composers .separ').hide();
@@ -155,7 +155,7 @@
 		$('#category .selectedText').attr('title',$(this).find('div').attr('title'));
         $('#selectedCategory').attr('id', '');
         $(this).find('div').attr('id', 'selectedCategory');
-        GetSongs('', $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
+        GetSongs($('#searchText').val(), $("input[class='VoiceOptions']:checked").val(), $('#selectedMassPart').attr('class').split('massPart')[1], $('#selectedCategory').attr('class').split('category')[1], $('#selectedComposer').attr('class').split('composer')[1]);
         
         $('#category ul').hide();
         $('#category .separ').hide();

@@ -259,7 +259,7 @@
 		</table>
 	</div>
 	<div id=\"MusicText\">
-		<div style=\"margin-left: 15px; margin-top: 7px;\">".$text."</div>
+		<div style=\"margin-left: 15px; margin-top: 7px; margin-bottom: 7px;\">".$text."</div>
 	</div>
 		";
     

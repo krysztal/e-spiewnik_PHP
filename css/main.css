@@ -280,6 +280,7 @@ tr.MaterialsItem {
     background-image: url("../image/fon2.png");
 	z-index:9;
 	width: 546px;
+	max-width: 546px !important;
 	min-height: 265px;
 	font: 16px Verdana;
 }

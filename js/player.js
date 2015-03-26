@@ -1,9 +1,9 @@
 ﻿var audio;
 var valClick = false;
 audio = new Audio();
-
+var element;
 $(document).ready(function(){
-   var element = jQuery('#MusicText').jScrollPane({autoReinitialise: true, maintainPosition: false});
+   element = jQuery('#MusicText').jScrollPane({autoReinitialise: true, maintainPosition: false});
    var element2 = jQuery('#Composers ul').jScrollPane({autoReinitialise: true, maintainPosition: false});
    //var element3 = jQuery('#SlideCreatorSongList').jScrollPane({autoReinitialise: true, maintainPosition: false});
    var api = element.data('jsp');
@@ -30,6 +30,7 @@ $(document).ready(function(){
                 $('#SongContent').html(data);
 				element = jQuery('#MusicText').jScrollPane({autoReinitialise: true, maintainPosition: false});
 				$("#MusicText").attr("style",$("#MusicText").attr("style")+" max-height: "+(contentHeight-155)+"px;");
+				//element.width(0);
             },
         });
 

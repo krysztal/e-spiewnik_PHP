@@ -213,7 +213,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div style="color: whitesmoke;">Jeden</div>
+                                                <div style="color: whitesmoke;">Unisono</div>
                                             </td>
                                             <td>
                                                 <input type="radio" class="VoiceOptions" value="oneVoice" name="VoiceOptions"/>
