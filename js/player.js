@@ -30,7 +30,7 @@ $(document).ready(function(){
                 $('#SongContent').html(data);
 				element = jQuery('#MusicText').jScrollPane({autoReinitialise: true, maintainPosition: false});
 				$("#MusicText").attr("style",$("#MusicText").attr("style")+" max-height: "+(contentHeight-155)+"px;");
-				//element.width(0);
+				element.width(0);
             },
         });
 

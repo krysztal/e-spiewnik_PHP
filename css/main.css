@@ -281,7 +281,7 @@ tr.MaterialsItem {
 	z-index:9;
 	width: 546px;
 	max-width: 546px !important;
-	min-height: 265px;
+	min-height: 200px;
 	font: 16px Verdana;
 }
 

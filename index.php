@@ -201,7 +201,7 @@
                             </div>
                             <div class="Filter" onmousedown="return false" onselectstart="return false">
                                 <div style="text-align: center; color: #F8D7B8;">Ilość głosów</div>
-                                <form>
+                                <form style="margin-left: 4px;">
                                     <table>
                                         <tr>
                                             <td>
@@ -213,7 +213,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <div style="color: whitesmoke;">Unisono</div>
+                                                <div style="color: whitesmoke;">Jeden</div>
                                             </td>
                                             <td>
                                                 <input type="radio" class="VoiceOptions" value="oneVoice" name="VoiceOptions"/>

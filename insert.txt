@@ -544,6 +544,60 @@ VALUES (141, 'Panie ogien Pal', 'Panie ogień Pal');
 INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
 VALUES (142, 'Panie prosze zabierz mnie tam', 'Panie proszę zabierz mnie tam');
 
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (143, 'Dzieki, o Panie', 'Dzięki, o Panie');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (144, 'Dzis jest czas', 'Dziś jest czas');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (145, 'Dzis Kosciele', 'Dziś Kościele');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (146, 'Emmanuel', 'Emmanuel');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (147, 'Gdybym przechodzil przez ciemna doline', 'Gdybym przechodził przez ciemną dolinę');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (148, 'Gdy omdlewa serce me', 'Gdy omdlewa serce me');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (149, 'Gdy schodzimy sie', 'Gdy schodzimy się');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (150, 'Gdy laske dasz', 'Gdy łaskę dasz');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (151, 'Gdziekolwiek pojde', 'Gdziekolwiek pójdę');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (152, 'Gloria', 'Gloria');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (153, 'Glos wdzieczny z Nieba wychodzi', 'Głos wdzięczny z Nieba wychodzi');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (154, 'Godzien, o godzien', 'Godzien, o godzien');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (155, 'Grzechem Adama', 'Grzechem Adama');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (156, 'Gwiazdo zaranna', 'Gwiazdo zaranna');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (157, 'Historia', 'Historia');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (158, 'Kiedys ujrze Cie pewnego dnia', 'Kiedyś ujrzę Cię pewnego dnia');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (159, 'Hosanna memu Bogu', 'Hosanna memu Bogu');
+
+INSERT INTO `testpl`.`Songs` (`Id`, `FileName`, `Name`) 
+VALUES (160, 'Hymn o Krzyzu', 'Hymn o Krzyżu');
+
 INSERT INTO `testpl`.`MassPart` (`Id`, `Name`, `FullName`) 
 VALUES (NULL, 'PNWE', 'Pieśni na Wejście');
 
@@ -631,6 +685,8 @@ INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Twila
 INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Gabriel', 'Wanke');
 INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'R.', 'Jef');
 INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Bob', 'Fitz');
+INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'Aleksandra', 'Szewczyk');
+INSERT INTO `testpl`.`Composers` (`Id`, `Name`, `SurName`)  VALUES (NULL, 'T.', 'Kostoń');
 
 
 
@@ -776,6 +832,24 @@ INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVo
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '140','37',0);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '141','1',0);
 INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '142','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '143','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '144','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '145','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '146','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '147','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '148','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '149','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '150','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '151','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '152','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '153','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '154','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '155','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '156','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '157','38',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '158','1',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '159','39',0);
+INSERT INTO `testpl`.`SongToComposer` (`Id`, `Songs_Id`, `Composers_Id`, `ManyVoice`) VALUES (NULL, '160','1',0);
 
 
 
